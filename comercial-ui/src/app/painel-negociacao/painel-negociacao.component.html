@@ -1,4 +1,13 @@
-Olá {{ nome }}
+<table>
+    <tr>
+        <th>Descrição</th>
+        <th>Prospecto</th>
+        <th>Valor</th>
+    </tr>
 
-<br>
-<input type="text"[(ngModel)]="nome"/>
+    <tr *ngFor="let oportunidade of oportunidades">
+        <td>{{ oportunidade.descricao }}</td>
+        <td>{{ oportunidade.nomeProspecto }}</td>
+        <td>{{ oportunidade.valor }}</td>
+    </tr>
+</table>
